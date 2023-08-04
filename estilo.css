@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.menuEsquerdo {
+    margin: 0 10px;
+    width: 270px;
+    padding: 10px;
+    background-color: rgb(240, 240, 240);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.mainMenu {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.logo {
+    padding: 10px;
+}
+.dadosMenu {
+    width: 100%;
+}
+.btn-mobile {
+    display: none;
+}
+.btnLinha {
+    border: 1px solid rgb(15, 15, 15);
+    width: 50px;
+    margin: 5px;
+}
+.dadosMenu ul li {
+    margin: 5px 0;
+    list-style: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+.dadosMenu ul li:hover {
+    color: aliceblue;
+    background-color: rgb(0, 136, 255);
+    cursor: pointer;
+}
+#menuCentral {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(240, 240, 240);
+}
+#card {
+    display: grid;
+    gap: 0;
+    grid-template-columns:repeat(auto-fit, minmax(330px, 1fr));
+}
+.cards {
+    margin: 20px;
+    background-color: rgb(0, 136, 255);
+    color: aliceblue;
+    min-width: 310px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 20px;
+}
+#formCadFuncionario {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0px;
+}
+#formCadFuncionario label {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#formCadFuncionario label button {
+    width: 100px;
+    height: 50px;
+    padding: 8px;
+}
+#formCadFuncionario label input {
+    padding: 8px;
+}
+
+#menuDireito {
+    margin: 0 10px;
+    width: 270px;
+    padding: 10px;
+    background-color: rgb(240, 240, 240);
+}
+
+.menuBottom {
+    margin: 5px 0;
+    list-style: none;
+    padding: 10px;
+
+}
+.menuBottom ul li {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 20px;
+}
+.menuBottom ul li:hover {
+    color: aliceblue;
+    background-color: rgb(0, 136, 255);
+    cursor: pointer;
+}
+
+
+@media (max-width: 830px) {
+
+        
+    #container {
+        display: flex;
+        flex-direction: column;
+    }
+    .scroll-lock {
+      overflow: hidden;  
+    }
+    .menuEsquerdo {
+        position: absolute;
+        margin-top: 50px;
+        width: 90%;
+        transform: translateX(-100%);
+        transition: 1.0s;
+        height: 90%;
+    }
+    .menuEsquerdo.isOpen {
+        position: absolute;
+        margin-top: 50px;
+        width: 90%;
+        transform: translateX(0%);
+        transition: 1.0s;
+
+    }
+    .btn-mobile {
+        margin-top: 5px;
+    }
+    .btnLinha {
+        transition: 1.0s;
+    }
+    .btn-mobile.menuOpen .btnLinha:nth-child(1) {
+        transition: 1.0s;
+        transform: rotate(50deg) translate(16px);
+    }
+    .btn-mobile.menuOpen .btnLinha:nth-child(2) {
+        opacity: 0;
+    }
+    .btn-mobile.menuOpen .btnLinha:nth-child(3) {
+        transform: rotate(-50deg) translate(16px);
+        transition: 1.0s;
+    }
+    .dadosMenu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: center;
+        width: 50px;
+    }
+    .btnLinha {
+        width: 35px;
+        border: 1px solid rgb(15, 15, 15);
+        margin: 5px;
+    }
+
+    .dadosMenu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo {
+        display: none;
+    }
+    .dadosMenu ul, li {
+        width: 70%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+   
+    
+}
